@@ -9,6 +9,6 @@ One simple command that can be very helpful across a Velocity network.
 Tested with Velocity 4.1.0
 ## Installation
 **THIS IS NOT A PAPER PLUGIN. THIS IS TO BE INSTALLED ONTO A VELOCITY PROXY ONLY**<br>
-Simply drag the latest ```.jar``` file into the Velocity plugins folder.
+Simply drag the [latest ```.jar```](https://github.com/oltaylor/find/releases) file into the Velocity plugins folder.
 ## Images
 Check out images on [my website](https://www.mrlukey.com/2026/07/22/find-velocity-plugin/)!
