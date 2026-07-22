@@ -6,8 +6,6 @@ import com.velocitypowered.api.proxy.Player;
 import com.velocitypowered.api.proxy.ProxyServer;
 import com.velocitypowered.api.proxy.player.*;
 import com.velocitypowered.api.proxy.server.RegisteredServer;
-import java.util.concurrent.CompletableFuture;
-import java.util.List;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.event.ClickEvent;
@@ -26,7 +24,7 @@ public class FindCmd implements SimpleCommand {
 
         if (source.hasPermission("find.find")) {
             if (invocation.arguments().length != 1) {
-                source.sendMessage(Component.text("Incorrect usage. Try: /find <username>"));
+                source.sendMessage(Component.text("Incorrect usage. Try: /find <username>", NamedTextColor.RED));
             } else {
                 String username = invocation.arguments()[0];
                 if (server.getPlayer(username).isEmpty()) {
