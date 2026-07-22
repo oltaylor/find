@@ -1,0 +1,11 @@
+{
+  "id": "find",
+  "name": "find",
+  "version": "${version}",
+  "main": "com.mrlukey.find.Find",
+  "description": "Find players on a Velocity network",
+  "url": "www.mrlukey.com",
+  "authors": [
+    "MrLukey"
+  ]
+}
