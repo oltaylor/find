@@ -10,6 +10,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.List;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.event.ClickEvent;
+import net.kyori.adventure.text.event.HoverEvent;
 
 public class FindCmd implements SimpleCommand {
     ProxyServer server;
@@ -32,7 +34,7 @@ public class FindCmd implements SimpleCommand {
                 } else {
                     Player p = server.getPlayer(username).get();
                     RegisteredServer server = p.getCurrentServer().get().getServer();
-                    source.sendMessage(Component.text("Player " + username + " is on server: " + server.getServerInfo().getName(), NamedTextColor.GREEN));
+                    source.sendMessage(Component.text("Player " + username + " is on server: " + server.getServerInfo().getName(), NamedTextColor.GREEN).clickEvent(ClickEvent.runCommand("/server " + server.getServerInfo().getName())).hoverEvent(HoverEvent.showText(Component.text("Click to connect to this server!"))));
                 }
             }
         } else {
